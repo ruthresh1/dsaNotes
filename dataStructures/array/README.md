@@ -48,3 +48,5 @@ A tuple is fixed size immutable list
 ```python
 arr = []
 ```
+
+## String

@@ -7,7 +7,7 @@
 ### Bubble sort
 The simplest of the sorting algorithms
 Basically its just comparing two numbers and changing their position based on their value
-Lower value is pushed ahead or the higher value sinks down
+Lower value is moved front or the higher value sinks down/to the end
 
 ```java
 // Bubble sort in Java
@@ -38,6 +38,30 @@ class Sort {
 }
 ```
 
+Optimized Bubble sort
+* breaks the outer loop if there have been no swaps concluding that the array is sorted
+* doesn't change the Time complexity, just 
+```java
+// Optimized Bubble sort in Java
+static void optimizedBubbleSort(int arr[]) {
+    int size = arr.length;
+    for(int i = 0; i < size - 1; i++) {
+        boolean swapped = false;
+        for(int j = 0; j < size - i - 1; j++) {
+            if(arr[j] > arr[j+1]) {
+                // swaps if they are not in ascending order
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                swapped = true;
+            }
+        }
+        if(!swapped) {
+            break;
+        }
+    }
+}
+```
 
 ### Insertion sort
 

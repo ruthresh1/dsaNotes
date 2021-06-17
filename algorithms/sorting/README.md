@@ -64,9 +64,41 @@ static void optimizedBubbleSort(int arr[]) {
 ```
 
 ### Insertion sort
+Just like sorting a bunch of playing cards with your hand
 
+```java
+//Insertion sort example
+static void insertionSort(int arr[]) {
+    int size = arr.length;
+    for(int step = 1; step < size; step++) {
+        int key = arr[step];
+        int j = step - 1;
+        // find min out of the unsorted
+        while( j >= 0 && key < arr[j]) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        // place key after element smaller than it
+        arr[j + 1] = key;
+    }
+}
+```
+| Particular | Value |
+| --------- | ----- |
+| Time Complexity    | O(n2)  |
+| Space Complexity    | O(1)  |
+| Stable  | Yes  |
 
 ### Selection sort
+
+```java
+
+```
+| Particular | Value |
+| --------- | ----- |
+| Time Complexity    | O(n2)  |
+| Space Complexity    | O(1)  |
+| Stable  | Yes  |
 
 ### Fast sorting algorithms
 

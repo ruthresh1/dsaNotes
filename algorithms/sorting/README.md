@@ -3,6 +3,8 @@
 #### rearrangement of elements in a decreasing or increasing order, usually used as a precussor for search
 
 ### Slow sorting algorithms
+* used for small set of input
+* best for almost sorted input
 
 ### Bubble sort
 The simplest of the sorting algorithms
@@ -73,7 +75,7 @@ static void insertionSort(int arr[]) {
     for(int step = 1; step < size; step++) {
         int key = arr[step];
         int j = step - 1;
-        // find min out of the unsorted
+        // TODO find the right comment
         while( j >= 0 && key < arr[j]) {
             arr[j + 1] = arr[j];
             j--;
@@ -90,15 +92,31 @@ static void insertionSort(int arr[]) {
 | Stable  | Yes  |
 
 ### Selection sort
+on each pass find the min and pull it to the front
 
 ```java
-
+static void selectionSort(int arr[]) {
+    int size = arr.length;
+    for(int step = 0; step < size - 1; step++) {
+        int minIndex = step;
+        // finding the min index
+        for(int i = step + 1; i < size; i++) {
+            if(arr[i] < arr[minIndex]) {
+                minIndex = i;
+            }
+        }
+        // swap min to the front
+        int temp = arr[step];
+        arr[step] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
 ```
 | Particular | Value |
 | --------- | ----- |
 | Time Complexity    | O(n2)  |
 | Space Complexity    | O(1)  |
-| Stable  | Yes  |
+| Stable  | No  |
 
 ### Fast sorting algorithms
 

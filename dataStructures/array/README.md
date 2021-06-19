@@ -2,8 +2,10 @@
 
 ## Array
 
-Contiguous blocks of memory that can store data of same type (homogenous data)
+* Contiguous blocks of memory that can store data of same type (homogenous data)
 Eg. A tie box
+* it has a fixed size
+* we access elements of an array using its index, which starts from 0
 
 ### Properties
 * Fixed size (not dynamic)
@@ -25,20 +27,49 @@ Instead of using individual variables, we use an array.
 
 ### Array Types
 1. 1-D Array
-2. 2-D Array
-3. N-D Array
+2. Multidimensional arrays
 
+### 2D Arrays
+* A two dimensional array is essentially a matrix of information, essentially a table
+* It is a row of 1d arrays
 --------------------------------------
 ### Java
 
 Arrays in Java are awesome
 Creation
 ```java
+// 1d array
 int arr[] = new int[10];
 arr[0] = 1;
 arr[0];     // 1
 arr[1];     // 0
 arr.length; // 10
+// Traversing array using loops
+for(int i = 0; i < arr.length; i++) {
+    arr[i] = i+1;
+}
+// for each loop
+for(int a : arr) {
+    System.out.println(a);
+}
+
+// 2d arrays
+int subject = 6;
+int students = 50;
+int[][] marks = new int[subject][students];
+int marks = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 0, 1, 2}
+}
+// access
+a[2][0];  // 9
+// Traversing a 2d array
+for(int i = 0; i < marks.length; i++) {
+    for(int j = 0; j < marks[i].length; j++) {
+        System.out.println(marks[i][j]);
+    }
+}
 ```
 
 ### Python
@@ -49,4 +80,4 @@ A tuple is fixed size immutable list
 arr = []
 ```
 
-## String
+

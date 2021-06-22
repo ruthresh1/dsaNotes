@@ -6,7 +6,9 @@
 Eg. A tie box
 * it has a fixed size
 * we access elements of an array using its index, which starts from 0
+* arrays are of two types - static and dynamic
 
+### Static arrays
 ### Properties
 * Fixed size (not dynamic)
 * indexed 
@@ -72,9 +74,14 @@ for(int i = 0; i < marks.length; i++) {
 }
 ```
 
+### Dynamic arrays
+* Arrays in programming languages like Python and Javascript are dynamic and usually referred to as lists
+* These are arrays that aren't fixed in size
+* Through amortized analysis we can prove that insertion into dynamic array is O(n)
+
 ### Python
-Arrays in Python are called lists, unlike in Java they are mutable and not fixed.
-A tuple is fixed size immutable list
+* Arrays in Python are called lists, unlike in Java they are mutable and not fixed.
+* A tuple is fixed size immutable list
 
 ```python
 arr = []

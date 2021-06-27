@@ -7,6 +7,6 @@ Characters
 Truth values
 Complex objects
 
-## Arrays 
+## [Arrays](https://github.com/ruthresh1/dsaNotes/tree/main/arrays)
 
 ## Strings

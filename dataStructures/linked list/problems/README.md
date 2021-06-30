@@ -2,7 +2,7 @@
 
 ### Easy
 1. Find kth node from the end of linked list
-2. Print the Middle of a given linked list
+2. Find the median of a given linked list
 3. Flattening a linked list
 
 ### Medium

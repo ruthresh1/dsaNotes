@@ -1,5 +1,3 @@
-# Arrays and Strings
-
 ## Array
 
 * Contiguous blocks of memory that can store data of same type (homogenous data)

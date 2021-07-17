@@ -9,6 +9,10 @@
 * Generic Tree
 * Binary Tree
   * each node can have at most 2 children
+  * Types
+    * Complete binary tree - the way a tree should be filled left to right, all levels complete, excepting the last one
+    * Full binary tree - all nodes should have 0 or 2 children, may not be complete binary tree
+    * Perfect binary tree - should be both complete and full binary tree
   * Binary Search Tree (BST)
 
 ### Defenitions
@@ -23,10 +27,23 @@
 * levels − Level of a node represents the generation of a node. If the root node is at level 0, then its next child node is at level 1, its grandchild is at level 2, and so on.
 * keys − refer to the value of a node based on which a search operation is to be carried out for a node.
 * height - is the number of edges from the root to the node
-* sibling - nodes at the same level
+* siblings - nodes that have the same parent
 * ancestor - parent and grandparent nodes and so on
 
 ### Types of Traversal
 * InOrder
+  * left subTree
+  * current node
+  * right subTree
 * PreOrder
+  * current node
+  * left subTree
+  * right subTree
 * PostOrder
+  * left subTree
+  * right subTree
+  * current node
+* Level order traversal
+  * use a queue - enqueue root to queue
+  * as long as queue is not empty
+  * dequeue and print value, enqueue left and right to queue

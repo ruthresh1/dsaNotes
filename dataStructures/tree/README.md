@@ -16,6 +16,7 @@
   * Binary Search Tree (BST)
 
 ### Defenitions
+* node - individual data point with data and references.
 * path − refers to the sequence of nodes along the edges of a tree.
 * root − the node at the top of the tree is called root. There is only one root per tree and one path from the root node to any node.
 * parent − all the nodes except the root node has one edge upward to a node called parent.
@@ -28,7 +29,7 @@
 * keys − refer to the value of a node based on which a search operation is to be carried out for a node.
 * height - is the number of edges from the root to the node
 * siblings - nodes that have the same parent
-* ancestor - parent and grandparent nodes and so on
+* ancestor - all the nodes in the path from root to the parent node of the node in question are its ancestors
 
 ### Types of Traversal
 * InOrder
@@ -47,3 +48,67 @@
   * use a queue - enqueue root to queue
   * as long as queue is not empty
   * dequeue and print value, enqueue left and right to queue
+
+```java
+// Binary Tree example to show this structure
+      4
+    /   \
+   2     6
+  / \   / \
+ 1   3 5   7
+// basic node structure
+class Node {
+  int data;
+  Node left;
+  Node right;
+  public Node(int data) {
+    this.data = data;
+  }
+}
+
+class Driver {
+  public static void main(String args[]) {
+    Node root = new Node(1);
+    Node leftRootChild = new Node(2);
+    Node rightRootChild = new Node(6);
+    root.left = leftRootChild;
+    root.right = rightRootChild;
+    Node leaf1 = new Node(1);
+    Node leaf2 = new Node(3);
+    Node leaf3 = new Node(5);
+    Node leaf4 = new Node(7);
+    leftRootChild.left = leaf1;
+    leftRootChild.right = leaf2;
+    rightRootChild.left = leaf3;
+    rightRootChild.right = leaf4;
+
+    printTree(root); // 1 2 3 4 5 6 7
+  }
+
+  public static void printTree(Node node) {
+    if(node == null) {
+      return;
+    }
+    //in order traversal
+    printTree(node.left);
+    System.out.println(node.data);
+    printTree(node.right);
+  }
+
+  // pre order traversal
+  public static void printPreOrderTraversal(Node node) {
+    if(node == null) return;
+    System.out.println(node.data);
+    printTree(node.left);
+    printTree(node.right);
+  }
+
+  // post order traversal
+  public static void printPostOrderTraversal(Node node) {
+    if(node == null) return;
+    printTree(node.left);
+    printTree(node.right);
+    System.out.println(node.data);
+  }
+}
+```

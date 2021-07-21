@@ -34,6 +34,32 @@ public static int sumOfNode(Node node) {
     return node.data+ leftCount+ rightCount;
 }
 
-// Driver/Client calls
+// Driver/Client call
 sumOfNode(root);
+```
+
+
+### Question 3
+### Given a binary tree perform a level order traversal?
+
+### Solution
+```java
+public static void levelOrderTraversal(Node node) {
+
+    List<Node> queue = new LinkedList<>();
+    queue.add(node);
+    while(!queue.isEmpty()) {
+        Node curr = queue.removeFirst();
+        System.out.print(curr.data+ " ");
+        if(curr.left != null) {
+            queue.addLast(curr.left);
+        }
+        if(curr.right != null) {
+            queue.addLast(curr.right);
+        }
+    }
+}
+
+// Driver/Client call
+levelOrderTraversal(root);
 ```

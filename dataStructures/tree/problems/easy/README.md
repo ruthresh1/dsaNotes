@@ -38,7 +38,6 @@ public static int sumOfNode(Node node) {
 sumOfNode(root);
 ```
 
-
 ### Question 3
 ### Given a binary tree perform a level order traversal?
 
@@ -62,4 +61,25 @@ public static void levelOrderTraversal(Node node) {
 
 // Driver/Client call
 levelOrderTraversal(root);
+```
+
+### Question 4
+### Find the height of a given Binary tree?
+
+### Solution
+```java
+public int height(Node node) {
+
+    if(node == null) {
+        return 0;
+    }
+    int leftHeight = height(node.left);
+    int rightHeight = height(node.right);
+    return 1+ Math.max(leftHeight, rightHeight);
+}
+
+// Driver call
+// initialize tree with 
+// Node root = ...
+int height = height(root);
 ```

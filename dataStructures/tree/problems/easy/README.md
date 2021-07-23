@@ -83,3 +83,24 @@ public int height(Node node) {
 // Node root = ...
 int height = height(root);
 ```
+
+### Question 5
+### Find the number of leaf nodes in a given Binary tree?
+
+### Solution
+```java
+int countLeafNodes(Node node) {
+    if(node == null) {
+        return 0;
+    }
+    if(node.left == null && node.right == null) {
+        return 1; // is a leaf
+    }
+    return countLeafNodes(node.left) + countLeafNodes(node.right);
+}
+
+// Driver call
+// initialize tree with 
+// Node root = ...
+int count = countLeafNodes(root);
+```

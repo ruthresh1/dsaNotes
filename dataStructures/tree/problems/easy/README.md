@@ -104,3 +104,26 @@ int countLeafNodes(Node node) {
 // Node root = ...
 int count = countLeafNodes(root);
 ```
+
+### Question 6
+### Print all the nodes at depth k in a given Binary tree?
+
+### Solution
+```java
+void printNodesAtDepthK(Node node, int k) {
+
+    if(node == null) {
+        return;
+    }
+    if(k == 0) {
+        System.out.print(node.data+ " ");
+    }
+    printNodesAtDepthK(node.left , k-1);
+    printNodesAtDepthK(node.right, k-1);
+}
+
+// Driver call
+// initialize tree with 
+// Node root = ...in
+printNodesAtDepthK(root, k);
+```

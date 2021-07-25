@@ -1,4 +1,4 @@
-## Problems on Trees
+## Easy Problems on Trees
 
 ### Question 1
 ### Find the number of nodes in a given binary tree?

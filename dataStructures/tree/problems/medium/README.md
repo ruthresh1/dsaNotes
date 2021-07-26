@@ -6,13 +6,13 @@
 ### Solution
 ```java
 Node removeLeaves(Node node) {
-    if(root == null ||
-    (root.left == null && root.right == null)) { // leaf
+    if(node == null ||
+    (node.left == null && node.right == null)) { // leaf
         return null;
     }
-    root.left = removeLeaves(node.left);
-    root.right = removeLeaves(node.right);
-    return root;
+    node.left = removeLeaves(node.left);
+    node.right = removeLeaves(node.right);
+    return node;
 }
 
 // Driver call
@@ -20,3 +20,23 @@ Node removeLeaves(Node node) {
 root = removeLeaves(root);
 ```
 
+### Question 2
+### Mirror a given binary tree
+
+### Solution
+```java
+void mirrorTree(Node node) {
+    if(node == null) {
+        return;
+    }
+    mirrorTree(node.left);
+    mirrorTree(node.right);
+    Node temp = node.left;
+    node.left = node.right;
+    node.right = temp;
+}
+
+// Driver call
+// Node root = ..
+mirrorTree(root);
+```

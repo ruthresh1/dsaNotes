@@ -11,3 +11,4 @@
 
 ### Medium
 1. Remove all leaf nodes of a given binary Tree!
+2. Mirror a given binary tree

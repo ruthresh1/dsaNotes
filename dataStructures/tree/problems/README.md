@@ -12,3 +12,7 @@
 ### Medium
 1. Remove all leaf nodes of a given binary Tree!
 2. Mirror a given binary tree
+3. Check if a given binary tree is balanced!
+
+
+### Hard

@@ -40,3 +40,36 @@ void mirrorTree(Node node) {
 // Node root = ..
 mirrorTree(root);
 ```
+
+### Question 3
+### Check if a given binary tree is balanced!
+
+### Solution
+```java
+boolean isBalanced(Node node) {
+    if(root == null) {
+        return true;
+    }
+    int leftHeight = height(node.left);
+    int rightHeight = height(node.right);
+    if(Math.abs(leftHeight - rightHeight) > 1) {
+        return false;
+    }
+    boolean isLeftBalanced = isBalanced(node.left);
+    boolean isRightBalanced = isBalanced(node.right);
+    return isLeftBalanced && isRightBalanced;
+}
+
+int height(Node node) {
+    if(node == null) {
+        return 0;
+    }
+    int leftHeight = height(node.left);
+    int rightHeight = height(node.right);
+    return 1+ Math.max(leftHeight, rightHeight);
+}
+
+// Driver call
+// Node root = ...
+boolean balanced = isBalanced(root);
+```

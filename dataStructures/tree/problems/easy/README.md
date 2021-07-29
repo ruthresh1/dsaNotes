@@ -1,4 +1,4 @@
-## Problems on Trees
+## Easy Problems on Trees
 
 ### Question 1
 ### Find the number of nodes in a given binary tree?
@@ -82,4 +82,48 @@ public int height(Node node) {
 // initialize tree with 
 // Node root = ...
 int height = height(root);
+```
+
+### Question 5
+### Find the number of leaf nodes in a given Binary tree?
+
+### Solution
+```java
+int countLeafNodes(Node node) {
+    if(node == null) {
+        return 0;
+    }
+    if(node.left == null && node.right == null) {
+        return 1; // is a leaf
+    }
+    return countLeafNodes(node.left) + countLeafNodes(node.right);
+}
+
+// Driver call
+// initialize tree with 
+// Node root = ...
+int count = countLeafNodes(root);
+```
+
+### Question 6
+### Print all the nodes at depth k in a given Binary tree?
+
+### Solution
+```java
+void printNodesAtDepthK(Node node, int k) {
+
+    if(node == null) {
+        return;
+    }
+    if(k == 0) {
+        System.out.print(node.data+ " ");
+    }
+    printNodesAtDepthK(node.left , k-1);
+    printNodesAtDepthK(node.right, k-1);
+}
+
+// Driver call
+// initialize tree with 
+// Node root = ...in
+printNodesAtDepthK(root, k);
 ```

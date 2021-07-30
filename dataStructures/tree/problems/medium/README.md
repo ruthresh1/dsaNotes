@@ -47,7 +47,7 @@ mirrorTree(root);
 ### Solution
 ```java
 boolean isBalanced(Node node) {
-    if(root == null) {
+    if(node == null) {
         return true;
     }
     int leftHeight = height(node.left);
@@ -72,4 +72,33 @@ int height(Node node) {
 // Driver call
 // Node root = ...
 boolean balanced = isBalanced(root);
+```
+
+### Question 4
+### Measure the diameter of a given binary tree!
+
+### Solution
+```java
+int measureDiameter(Node node) {
+    if(node == null) {
+        return 0;
+    }
+    int option1 = height(node.left) + height(node.right);
+    int option2 = measureDiameter(node.left);
+    int option3 = measureDiameter(node.right);
+    return Math.max(option1, Math.max(option2, option3));
+}
+
+int height(Node node) {
+    if(node == null) {
+        return 0;
+    }
+    int leftHeight = height(node.left);
+    int rightHeight = height(node.right);
+    return 1+ Math.max(leftHeight, rightHeight);
+}
+
+// Driver call
+// Node root = ...
+int diameter = measureDiameter(root);
 ```

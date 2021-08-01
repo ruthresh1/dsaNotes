@@ -7,6 +7,7 @@
 4. Find the height of a given Binary tree?
 5. Find the number of leaf nodes in a given binary tree?
 6. Print all the nodes at depth k in a given Binary tree!
+7. Search for a key in a given binary search tree!
 
 
 ### Medium

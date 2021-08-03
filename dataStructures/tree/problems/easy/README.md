@@ -127,3 +127,28 @@ void printNodesAtDepthK(Node node, int k) {
 // Node root = ...in
 printNodesAtDepthK(root, k);
 ```
+
+### Question 7
+### Search for a key in a given binary search tree!
+
+### Solution
+```java
+boolean search(Node node, int key) {
+
+    if(node == null) {
+        return false;
+    }
+    if(node.data == key) {
+        return true;
+    } else if(node.data > key) {
+        return search(node.left, key); 
+    } else {
+        return search(node.right, key);
+    }
+}
+
+// Driver call
+// initialize tree with 
+// Node root = a BST
+search(root, k);
+```

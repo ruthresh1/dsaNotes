@@ -1,13 +1,33 @@
 ## Problems on Arrays
 
 ### Question 1
-### Given an array of numbers, replace each even number with 2 of the same
+### Find the largest in the given array
 ### Question 2
+### Given an array of numbers, replace each even number with 2 of the same
+### Question 3
 ### Find a sub-array that sums to a target
 ### Question 3
 ### 
 
-### Solution
+Question 1
+Find the largest in the given array
+```java
+public int findLargest(int[] arr) {
+
+    int max = Integer.MIN_VALUE;
+    for(int num : arr) {
+        if(num > max) {
+            max = num;
+        }
+    }
+    return max;
+}
+```
+
+Question 2
+Given an array of numbers, replace each even number with 2 of the same
+
+Solution
 ```java
 public void cloneEvenNumbers(int[] arr) {
     int end = arr.length;

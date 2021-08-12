@@ -3,11 +3,12 @@
 ### Question 1
 ### Find the largest in the given array
 ### Question 2
+### Check if a given number is present in the array
+### Question 3
 ### Given an array of numbers, replace each even number with 2 of the same
-### Question 3
+### Question 4
 ### Find a sub-array that sums to a target
-### Question 3
-### 
+
 
 Question 1
 Find the largest in the given array
@@ -25,6 +26,22 @@ public int findLargest(int[] arr) {
 ```
 
 Question 2
+Check if a given number is present in the array
+
+Solution
+```java
+public int linearSearch(int[] arr, int key) {
+
+    for(int i = 0; i < arr.length; i++) {
+        if(arr[i] == key) {
+            return i;
+        }
+    }
+    return -1;
+}
+```
+
+Question 3
 Given an array of numbers, replace each even number with 2 of the same
 
 Solution
@@ -44,10 +61,10 @@ public void cloneEvenNumbers(int[] arr) {
 }
 ```
 
-### Question 2
-### Find a sub-array that sums to a target
+Question 4
+Find a sub-array that sums to a target
 
-### Solution
+Solution
 ```java
 class Pair {
     int first;

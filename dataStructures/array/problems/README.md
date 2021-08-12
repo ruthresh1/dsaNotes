@@ -2,13 +2,14 @@
 
 ### Easy
 1. Find the largest in the given array!
-2. How do you find the missing number in a given integer array of 1 to 100? 
-3. How do you find the duplicate number on a given integer array? 
-4. How do you find the largest and smallest number in an unsorted integer array? 
-5. How do you find all pairs of an integer array whose sum is equal to a given number? 
-6. How do you find duplicate numbers in an array if it contains multiple duplicates? 
-7. How to remove duplicates from a given array in Java? 
-8. How do you search a target value in a rotated array? 
+2. Check if a given number is present in the array
+3. How do you find the missing number in a given integer array of 1 to 100? 
+4. How do you find the duplicate number on a given integer array? 
+5. How do you find the largest and smallest number in an unsorted integer array? 
+6. How do you find all pairs of an integer array whose sum is equal to a given number? 
+7. How do you find duplicate numbers in an array if it contains multiple duplicates? 
+8. How to remove duplicates from a given array in Java? 
+9. How do you search a target value in a rotated array? 
 
 
 ### Medium

@@ -17,3 +17,4 @@ Complex objects
 
 ## [Linked List](https://github.com/ruthresh1/dsaNotes/tree/main/dataStructures/linked+list)
 
+## [Tree](https://github.com/ruthresh1/dsaNotes/tree/main/dataStructures/tree)

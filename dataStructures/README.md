@@ -9,4 +9,12 @@ Complex objects
 
 ## [Arrays](https://github.com/ruthresh1/dsaNotes/tree/main/arrays)
 
-## Strings
+## [Strings](https://github.com/ruthresh1/dsaNotes/tree/main/strings)
+
+## [Stack](https://github.com/ruthresh1/dsaNotes/tree/main/dataStructures/stack)
+
+## [Queue](https://github.com/ruthresh1/dsaNotes/tree/main/dataStructures/queue)
+
+## [Linked List](https://github.com/ruthresh1/dsaNotes/tree/main/dataStructures/linked+list)
+
+## [Tree](https://github.com/ruthresh1/dsaNotes/tree/main/dataStructures/tree)

@@ -1,6 +1,6 @@
 ## Sorting
 
-#### rearrangement of elements in a decreasing or increasing order, usually used as a precussor for search
+#### rearrangement of elements in a decreasing or increasing order, usually used as a precursor for search
 
 ### Slow sorting algorithms
 * used for small set of input
@@ -9,7 +9,7 @@
 ### Bubble sort
 The simplest of the sorting algorithms
 Basically its just comparing two numbers and changing their position based on their value
-Lower value is moved front or the higher value sinks down/to the end
+Lower value is moved up or the higher value sinks down/to the bottom
 
 ```java
 // Bubble sort in Java
@@ -31,6 +31,21 @@ class Sort {
         }
     }
 
+    static void bubbleSort2(int arr[]) {
+        int size = arr.length;
+        int temp;
+        for(int i = 0; i < size - 1; i++) {
+            for(int j = size - 1; j >= i; j--) {
+                if(arr[j] < arr[j-1]) {
+                    // swaps if they are not in ascending order
+                    temp = arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                }
+            }
+        }
+    }
+
     public static void main(String args[]) {
 
         int[] data = { 4, 3, 1, 5 };
@@ -39,10 +54,18 @@ class Sort {
     }
 }
 ```
+Eg.
+
+| Particular | Value |
+| --------- | ----- |
+| Time Complexity    | O(n2)  |
+| Space Complexity    | O(1)  |
+| Stable  | Yes  |
+| InPlace  | Yes  |
 
 Optimized Bubble sort
 * breaks the outer loop if there have been no swaps concluding that the array is sorted
-* doesn't change the Time complexity, just 
+* doesn't change the Time complexity, just optimal while running
 ```java
 // Optimized Bubble sort in Java
 static void optimizedBubbleSort(int arr[]) {

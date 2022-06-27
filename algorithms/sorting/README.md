@@ -118,7 +118,7 @@ static void insertionSort(int arr[]) {
 | InPlace  | Yes  |
 
 ### Selection sort
-on each pass find the min and pull it to the front
+on each pass find the min and swap it to the front
 
 ```java
 static void selectionSort(int arr[]) {
@@ -137,15 +137,42 @@ static void selectionSort(int arr[]) {
         arr[minIndex] = temp;
     }
 }
+
+static void selectionSortWithValue(int arr[]) {
+    int size = arr.length, minIndex, minValue;
+    for(int step = 0; step < size - 1; step++) {
+        minIndex = step;
+        minValue = arr[step];
+        // finding the min index
+        for(int i = step + 1; i < size; i++) {
+            if(arr[i] < minValue) {
+                minValue = arr[i];
+                minIndex = i;
+            }
+        }
+        // swap min to the front
+        arr[minIndex] = arr[step];
+        arr[step] = minValue;
+    }
+}
 ```
 | Particular | Value |
 | --------- | ----- |
 | Time Complexity    | O(n2)  |
 | Space Complexity    | O(1)  |
 | Stable  | No  |
+| InPlace  | Yes  |
 
 ### Fast sorting algorithms
 
 ### Merge sort
 
 ### Quick sort
+
+
+### Sorting algorithms that use transform and conquer
+### Heap sort
+
+### counting sort
+
+### radix sort

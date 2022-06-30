@@ -166,6 +166,27 @@ static void selectionSortWithValue(int arr[]) {
 ### Fast sorting algorithms
 
 ### Merge sort
+A faster sorting algorithm that uses Divide and Conquer
+It uses O(n) auxillary space
+
+```java
+static void mergeSort(int arr[]) {
+    quickSort(arr, 0, arr.length);
+}
+
+static void mergeSort(int arr[], int start, int end) {
+    if(start == end) 
+        return;
+    int mid = start + (end - start)/2;
+    mergeSort(arr, start, mid);
+    mergeSort(arr, mid+1, end);
+    merge(arr, start, mid, end);
+}
+
+static void merge(int arr[], int start, int mid, int end) {
+//TODO
+}
+```
 
 ### Quick sort
 

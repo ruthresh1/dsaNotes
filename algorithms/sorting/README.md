@@ -214,6 +214,13 @@ static void merge(int arr[], int start, int mid, int end) {
     }
 }
 ```
+| Particular | Value |
+| --------- | ----- |
+| Time Complexity    | O(nlog n)  |
+| Space Complexity    | O(n)  |
+| Stable  | Yes  |
+| InPlace  | No  |
+
 
 ### Quick sort
 

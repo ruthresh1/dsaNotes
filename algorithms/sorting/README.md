@@ -223,7 +223,11 @@ static void merge(int arr[], int start, int mid, int end) {
 
 
 ### Quick sort
+* the most widely used sorting algorithm (Tim sort is next)
+* is not stable
 
+```java
+```
 
 ### Sorting algorithms that use transform and conquer
 ### Heap sort

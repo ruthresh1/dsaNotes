@@ -223,8 +223,8 @@ static void merge(int arr[], int start, int mid, int end) {
 
 
 ### Quick sort
-* the most widely used sorting algorithm (Tim sort is next)
-* is not stable
+* the most widely used sorting algorithm (as a part of Tim sort)
+* is not stable but is inplace
 
 ```java
 static void quickSort(int[] arr, int low, int high) {
@@ -248,6 +248,13 @@ int partition(int[] arr, int low, int high) {
     return i+1;
 }
 ```
+
+| Particular | Value |
+| --------- | ----- |
+| Time Complexity    | O(n2)  | Average case O(nlogn)
+| Space Complexity    | O(1)  |
+| Stable  | No  |
+| InPlace  | Yes  |
 
 ### Sorting algorithms that use transform and conquer
 ### Heap sort

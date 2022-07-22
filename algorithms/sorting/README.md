@@ -250,6 +250,20 @@ int partition(int[] arr, int low, int high) {
 }
 
 //hoare's partition
+int partition(int[] arr, int low, int high) {
+    int pivot = arr[low];
+    int i = low - 1, j = high + 1;
+    while(true) {
+        do {
+            i++;
+        } while(arr[i] < pivot);
+        do {
+            j--;
+        } while(arr[j] > pivot);
+        if(i == j) return j;
+        swap(arr, i, j);
+    }
+}
 ```
 
 | Particular | Value |

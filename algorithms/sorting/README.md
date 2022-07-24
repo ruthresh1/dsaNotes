@@ -225,6 +225,7 @@ static void merge(int arr[], int start, int mid, int end) {
 ### Quick sort
 * the most widely used sorting algorithm (as a part of Tim sort)
 * is not stable but is inplace
+* there are different ways to partition (lomuto, hoare's)
 
 ```java
 static void quickSort(int[] arr, int low, int high) {
@@ -234,7 +235,7 @@ static void quickSort(int[] arr, int low, int high) {
         quickSort(arr, p + 1, high);
     }
 }
-
+// lomuto's partition
 int partition(int[] arr, int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
@@ -246,6 +247,22 @@ int partition(int[] arr, int low, int high) {
     }
     swap(arr, i+1, high);
     return i+1;
+}
+
+//hoare's partition
+int partition(int[] arr, int low, int high) {
+    int pivot = arr[low];
+    int i = low - 1, j = high + 1;
+    while(true) {
+        do {
+            i++;
+        } while(arr[i] < pivot);
+        do {
+            j--;
+        } while(arr[j] > pivot);
+        if(i == j) return j;
+        swap(arr, i, j);
+    }
 }
 ```
 
